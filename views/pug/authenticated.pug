@@ -1,0 +1,20 @@
+extends layout.pug
+
+block leftPanel
+  form#leaveReviewForm(action='')
+    label(for="gameName") Name of Game: 
+    input#gameName(autocomplete='off' required)
+    label(for="rating") Rating out of 5: 
+    select#rating(autocomplete='off')
+      -for (let i = 0; i <= 5; i++)
+        option(id="rating"+i) #{i}
+    label(for="reviewField") Review: 
+    textarea#reviewField(autocomplete='off' required)
+    .flexCenter#submitReviewContainer
+      button.myBtn#submitReview Submit Review
+  a#logout(href='/logout') 
+    button.myBtn Logout  
+    
+block scripts
+  script(src='https://code.jquery.com/jquery-2.2.1.min.js', integrity='sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=', crossorigin='anonymous')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.2/socket.io.min.js')
