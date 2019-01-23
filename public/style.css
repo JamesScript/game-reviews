@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+* {
+  font-family: 'VT323', monospace;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 120px;
+  margin: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+#pacman {
+  width: 50px;
+  height: 50px;
+}
+
+header {
+  text-align: center;
+  background: black;
+  color: white;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+}
+
+.loginButton {
+  background: grey;
+  border: 3px outset #A5A5A5;
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  width: 200px;
+  font-size: 20px;
+  align-items: center;
+  color: white;
+}
+
+#facebook {
+ background: #3b5998;
+}
+
+.loginButton:hover {
+  color: gold;
+}
+
+.loginButton:active {
+  border: 3px inset #A5A5A5;
+  font-size: 19px;
+}
+
+#githubIcon {
+  height: 30px;
+  width: 30px;
+}
+
+.leftPanel {
+  width: 550px;
+  text-align: center;
+  background: #666666;
+  height: calc(100vh - 162px);
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.leftPanel::-webkit-scrollbar {
+  width: 25px;
+  background: #666666;
+}
+
+.leftPanel::-webkit-scrollbar-thumb {
+/*   background-image: url('https://cdn.glitch.com/b96e7e0f-81f0-4a60-b116-0c39c067b370%2Fpacman.jpg?1548004771589'); */
+/*   background-size: 25px 25px; */
+  background: #222222;
+  border-radius: 5px;
+}
+
+.closeLeftPanel {
+  width: 30px;
+  height: calc(100vh - 162px);
+  background: #9A9A9A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.closeLeftPanel:hover {
+  color: white;
+}
+
+.rightPanel {
+  width: 100%;
+  text-align: center;
+  background: #151515;
+  height: calc(100vh - 162px);
+  font-size: 26px;
+  color: white;
+  overflow-y: scroll;
+/*   padding: 50px; */
+}
+
+.sortBy {
+  text-align: left;
+  margin: 5px;
+}
+
+.sortBy * {
+  display: inline;
+}
+
+.game {
+  background: #2B2B2B;
+  border: 5px solid black;
+  margin: 50px;
+  padding: 50px;
+  color: #AAFFAA;
+  box-shadow: black 10px 5px 15px;
+}
+
+.review {
+  background: #3B3B3B;
+  text-align: justify;
+  padding: 10px;
+  margin: 10px;
+}
+
+.review * {
+  margin: 10px;
+}
+
+.stars {
+  color: black;
+}
+
+.gameName {
+  margin: 10px;
+}
+
+.smallerWriting {
+  color: #DCFFDC;
+  font-size: 24px;
+  margin: 10px;
+}
+
+#leaveReviewForm {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 30% 70%;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+form * {
+  margin: 10px;
+  font-size: 25px;
+}
+
+select {
+  width: 50px;
+}
+
+textarea {
+  height: 200px;
+  resize: none;
+}
+
+input, textarea, select {
+  background: black;
+  color: white;
+  border: #A3A3A3 inset 5px;
+}
+  
+label {
+  text-align: right;
+}
+
+#submitReviewContainer {
+  grid-column: 1 / span 2;
+}
+
+.myBtn {
+  font-size: 35px;
+  border: 3px outset #A3A3A3;
+  cursor: pointer;
+}
+
+.myBtn:hover {
+  color: gold;
+}
+
+.myBtn:active {
+  border: 3px inset #A3A3A3;
+  font-size: 34px;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 780px) {
+  * {
+    background: yellow;
+  }
+}

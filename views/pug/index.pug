@@ -1,0 +1,15 @@
+extends layout.pug
+
+block leftPanel
+  .login
+    a(href='/auth/github')
+      .loginButton
+        img#githubIcon(src="https://cdn.glitch.com/b96e7e0f-81f0-4a60-b116-0c39c067b370%2FgithubIcon.png?1548005576233")
+        p#githubText Login with Github
+    a(href='/auth/facebook')
+      .loginButton#facebook
+        p Login with Facebook
+
+    
+block scripts
+  script(src='https://code.jquery.com/jquery-2.2.1.min.js', integrity='sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=', crossorigin='anonymous')
