@@ -29,6 +29,17 @@ module.exports = function (app, db) {
       .get(passport.authenticate('facebook', { successRedirect: '/authenticated',
                                       failureRedirect: '/' }));  
   
+    // GOOGLE AUTHENTICATION
+    app.route('/auth/google')
+      .get(passport.authenticate('google', { scope: ['profile'] }));  
+  
+    // GOOGLE REDIRECT
+    app.route('/auth/google/callback').get( 
+      passport.authenticate('google', { failureRedirect: '/' }),
+      (req, res) => {
+        res.redirect('/authenticated');
+      });
+  
     // PRIVACY POLICY
     app.route('/privacy-policy')
       .get((req, res) => {

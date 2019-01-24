@@ -9,6 +9,9 @@ dependencies:
   passport: 0.3.2
   passport-facebook: 2.1.1
   passport-github: 1.1.0
+  passport-google-oauth: 1.0.0
+  passport-google-oauth2: 0.1.6
+  passport-google-oauth20: 1.0.0
   passport-local: 1.0.0
   pug: 0.1.0
 packages:
@@ -682,6 +685,35 @@ packages:
       node: '>= 0.4.0'
     resolution:
       integrity: sha1-jOHj/NYa11eOsd9ZWDnkrqEjVdQ=
+  /passport-google-oauth/1.0.0:
+    dependencies:
+      passport-google-oauth1: 1.0.0
+      passport-google-oauth20: 1.0.0
+    dev: false
+    engines:
+      node: '>= 0.4.0'
+    resolution:
+      integrity: sha1-ZfUGMxkq0GJ6GLCJYAdxCdhOt20=
+  /passport-google-oauth1/1.0.0:
+    dependencies:
+      passport-oauth1: 1.1.0
+    dev: false
+    resolution:
+      integrity: sha1-r3SoA99R7GRvZqRNgigr5vEI4Mw=
+  /passport-google-oauth2/0.1.6:
+    dependencies:
+      passport-oauth2: 1.4.0
+    dev: false
+    resolution:
+      integrity: sha1-39cBasdEn+J8/rJSrpdK/CMleg0=
+  /passport-google-oauth20/1.0.0:
+    dependencies:
+      passport-oauth2: 1.4.0
+    dev: false
+    engines:
+      node: '>= 0.4.0'
+    resolution:
+      integrity: sha1-O5YOih1w0dvnlGFcgnxoxAOSpdA=
   /passport-local/1.0.0:
     dependencies:
       passport-strategy: 1.0.0
@@ -690,6 +722,16 @@ packages:
       node: '>= 0.4.0'
     resolution:
       integrity: sha1-H+YyaMkudWBmJkN+O5BmYsFbpu4=
+  /passport-oauth1/1.1.0:
+    dependencies:
+      oauth: 0.9.15
+      passport-strategy: 1.0.0
+      utils-merge: 1.0.1
+    dev: false
+    engines:
+      node: '>= 0.4.0'
+    resolution:
+      integrity: sha1-p96YiiEfnPRoc3cTDqdN8ycwyRg=
   /passport-oauth2/1.4.0:
     dependencies:
       oauth: 0.9.15
@@ -1129,5 +1171,8 @@ specifiers:
   passport: ^0.3.2
   passport-facebook: ^2.1.1
   passport-github: ^1.1.0
+  passport-google-oauth: ^1.0.0
+  passport-google-oauth2: ^0.1.6
+  passport-google-oauth20: ^1.0.0
   passport-local: ^1.0.0
   pug: ^0.1.0

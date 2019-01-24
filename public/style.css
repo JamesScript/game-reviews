@@ -46,14 +46,20 @@ main {
   font-size: 20px;
   align-items: center;
   color: white;
+  margin: 20px;
 }
 
 #facebook {
- background: #3b5998;
+  background: #3b5998;
+}
+
+#google {
+  background: white;
+  color: black;
 }
 
 .loginButton:hover {
-  color: gold;
+  color: gold !important;
 }
 
 .loginButton:active {
@@ -61,9 +67,14 @@ main {
   font-size: 19px;
 }
 
-#githubIcon {
+.icon {
   height: 30px;
   width: 30px;
+}
+
+.loginButton:active .icon {
+  height: 29px;
+  width: 29px;
 }
 
 .leftPanel {
