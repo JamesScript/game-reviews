@@ -1,6 +1,7 @@
 extends layout.pug
 
 block leftPanel
+  p#usernameDisplay
   form#leaveReviewForm(action='')
     label(for="gameName") Name of Game: 
     input#gameName(autocomplete='off' required)
@@ -18,3 +19,4 @@ block leftPanel
 block scripts
   script(src='https://code.jquery.com/jquery-2.2.1.min.js', integrity='sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=', crossorigin='anonymous')
   script(src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.2/socket.io.min.js')
+  script(src="./public/renderUsername.js")

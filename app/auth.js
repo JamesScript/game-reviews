@@ -3,6 +3,7 @@ const mongo       = require('mongodb').MongoClient;
 const passport    = require('passport');
 const GitHubStrategy = require('passport-github').Strategy;
 const FacebookStrategy = require('passport-facebook').Strategy;
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 module.exports = function (app, db) {
   
@@ -56,13 +57,23 @@ module.exports = function (app, db) {
     ));
   
     passport.use(new FacebookStrategy({
-      clientID: process.env.FACEBOOK_APP_ID,
-      clientSecret: process.env.FACEBOOK_APP_SECRET,
-      callbackURL: "https://game-reviews.glitch.me/auth/facebook/callback"
-    },
-    function(accessToken, refreshToken, profile, done) {
-      findOrCreateUser(accessToken, refreshToken, profile, done);
-    }
-  ));
+        clientID: process.env.FACEBOOK_APP_ID,
+        clientSecret: process.env.FACEBOOK_APP_SECRET,
+        callbackURL: "https://game-reviews.glitch.me/auth/facebook/callback"
+      },
+      function(accessToken, refreshToken, profile, done) {
+        findOrCreateUser(accessToken, refreshToken, profile, done);
+      }
+    ));
+  
+    passport.use(new GoogleStrategy({
+        clientID: process.env.GOOGLE_ID,
+        clientSecret: process.env.GOOGLE_SECRET,
+        callbackURL: "https://game-reviews.glitch.me/auth/google/callback"
+      },
+      function(accessToken, refreshToken, profile, cb) {
+        findOrCreateUser(accessToken, refreshToken, profile, cb);
+      }
+    ));
   
 }
