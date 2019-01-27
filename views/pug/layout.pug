@@ -16,7 +16,14 @@ html
         block leftPanel
       .closeLeftPanel#closeOpenPanel <<
       .rightPanel
+        #hamburger
+          -for (let i = 0; i < 3; i++)
+            .line(id="line_"+i)
+        #menuContainer
+          #menu
+            p Sort by:
         #reviewContainer
     block scripts
     script(src='/public/renderReviews.js')
     script(src='/public/client.js')
+    script(src='/public/sortReviews.js')

@@ -46,7 +46,7 @@ main {
   font-size: 20px;
   align-items: center;
   color: white;
-  margin: 20px;
+  margin: 30px;
 }
 
 #facebook {
@@ -126,6 +126,183 @@ main {
 /*   padding: 50px; */
 }
 
+#hamburger {
+  cursor: pointer;
+  margin-top: 20px;
+  width: 50px;
+  height: 45px;
+  right: 40px;
+  position: absolute;
+  z-index: 10;
+/*   border: 1px solid red; */
+}
+
+.line {
+/*   margin-left: 20px; */
+  transform: translateY(20px);
+  width: 50px;
+  height: 5px;
+  position: absolute;
+  background: white;
+}
+
+#line_0 {
+  margin-top: -20px;
+  transform-origin: 0 0;
+/*   animation: line_0toCross 500ms ease-out forwards; */
+}
+
+#line_1 {
+  margin-top: 0px;
+  transform-origin: 25px 50%;
+/*   animation: line_1toCross 500ms ease-out forwards; */
+}
+
+#line_2 {
+  margin-top: 20px;
+  transform-origin: 0 0;
+/*   animation: line_2toCross 500ms ease-out forwards; */
+}
+
+.line_0toCross {
+    animation: line_0toCross 500ms ease-out forwards;
+}
+
+.line_1toCross {
+    animation: line_1toCross 500ms ease-out forwards;
+}
+
+.line_2toCross {
+    animation: line_2toCross 500ms ease-out forwards;
+}
+
+.line_0toBurger {
+    animation: line_0toBurger 500ms ease-out forwards;
+}
+
+.line_1toBurger{
+    animation: line_1toBurger 500ms ease-out forwards;
+}
+
+.line_2toBurger {
+    animation: line_2toBurger 500ms ease-out forwards;
+}
+
+@keyframes line_0toCross {
+  0% {
+    width: 50px;
+    transform: translateY(20px) rotate(0);
+  }
+  
+  100% {
+    width: 63px;
+    transform: translateY(20px) rotate(40deg);
+  }
+}
+
+@keyframes line_1toCross {
+  0% {
+    width: 50px;
+    transform: translateY(20px) rotate(0) scaleX(1);
+  }
+  
+  100% {
+    width: 63px;
+    transform: translateY(20px) rotate(0) scaleX(0);
+  }
+}
+
+@keyframes line_2toCross {
+  0% {
+    width: 50px;
+    transform: translateY(20px) rotate(0);
+  }
+  
+  100% {
+    width: 63px;
+    transform: translateY(20px) rotate(-40deg);
+  }
+}
+
+@keyframes line_0toBurger {
+  0% {
+    width: 63px;
+    transform: translateY(20px) rotate(40deg);
+  }
+  
+  100% {
+    width: 50px;
+    transform: translateY(20px) rotate(0);
+  }
+}
+
+@keyframes line_1toBurger {
+  0% {
+    width: 63px;
+    transform: translateY(20px) rotate(0) scaleX(0);
+  }
+  
+  100% {
+    width: 50px;
+    transform: translateY(20px) rotate(0) scaleX(1);
+  }
+}
+
+@keyframes line_2toBurger {
+  0% {
+    width: 63px;
+    transform: translateY(20px) rotate(-40deg);
+  }
+  
+  100% {
+    width: 50px;
+    transform: translateY(20px) rotate(0);
+  }
+}
+
+#menuContainer {
+  position: absolute;
+  margin-top: -30px;
+  width: calc(100vw - 430px);
+  perspective: 400px;
+}
+
+#menu {
+  background: rgba(0,0,0,0.9);
+  height: 80px;
+  transform-origin: 50% 0;
+  transform: rotateX(-90deg);
+/*   margin-top: 0; */
+}
+
+.showMenu {
+  animation: showMenu 500ms linear forwards;
+}
+
+.hideMenu {
+  animation: hideMenu 500ms linear forwards;
+}
+
+@keyframes showMenu {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  
+  100% {
+    transform: rotateX(0);
+  }
+}
+
+@keyframes hideMenu {
+  0% {
+    transform: rotateX(0);
+  }
+  
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
+
 .sortBy {
   text-align: left;
   margin: 5px;
@@ -180,6 +357,11 @@ main {
   display: none;
 }
 
+#usernameDisplay {
+  margin: 10px;
+  font-size: 20px;
+}
+
 form * {
   margin: 10px;
   font-size: 25px;
@@ -229,7 +411,7 @@ label {
 }
 
 @media only screen and (max-width: 780px) {
-  * {
+/*   * {
     background: yellow;
-  }
+  } */
 }

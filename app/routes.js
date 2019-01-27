@@ -98,6 +98,12 @@ module.exports = function (app, db) {
           // db.close();
         });
     });
+  
+    // GET USERNAME TO DISPLAY ON PAGE
+    app.route('/username')
+      .get((req, res) => {
+        res.send(req.user.name);
+    });
     
     // GO TO THE PAGE FOR AUTHENTICATED USERS WHERE THEY CAN LEAVE A REVIEW
     app.route('/authenticated')

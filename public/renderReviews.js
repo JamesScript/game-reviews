@@ -1,6 +1,7 @@
 function renderReviews(reviews) {
   // All reviews for all games go in container
   const container = $("#reviewContainer");
+  container.html("");
   // Iterate through all games 
   reviews.data.map(datum => {
     // Everything about a particular game goes into reviewDiv
@@ -40,6 +41,12 @@ function renderReviews(reviews) {
     if (averageRating * 100 !== Math.floor(averageRating) * 100) {
         averageRating = averageRating.toFixed(2);
     }
+    // Save average rating in global variable containing data
+    allReviews.data.map(_review => {
+      if (_review.gameName === datum.gameName) {
+        _review.averageRating = averageRating;
+      }
+    });
     // Prepend average rating then heading last for simplicity
     const avgRatingText = $("<p>").addClass("smallerWriting").text("Average Rating: "+averageRating+" / 5");
     reviewDiv.prepend(avgRatingText);
